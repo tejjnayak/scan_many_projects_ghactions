@@ -47,7 +47,7 @@ jobs:
               fi
             fi
             cd project
-            #add any build steps that are needed here
+            #ADD ANY CUSTOM BUILD STEPS YOU NEED HERE
             if [ -f defaults.txt ]; then
                 cp defaults.txt requirements.txt
                 python -m pip install --upgrade pip
