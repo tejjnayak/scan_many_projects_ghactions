@@ -15,12 +15,12 @@ Go into your github profile settings->developer settings->Fine-grained tokens->g
 
 Make sure you give read access to code, metadata as permissions. 
 
-Create Endor Labs API keys with code scanning permissions at: https://app.endorlabs.com/t/themotleyfool/access/api-keys
+Create Endor Labs API keys with code scanning permissions at: https://app.endorlabs.com/t/<namespace>/access/api-keys
 Add those 3 values into your project settings as secrets:
 
 Step 3:
 
-Edit .github/workflows/scan.yml so that it has the names of the secret that you choose on the settings. Also change the value of ENDOR_NAMESPACE to be 'themotleyfool'
+Edit .github/workflows/scan.yml so that it has the names of the secret that you choose on the settings. Also change the value of ENDOR_NAMESPACE to be '<namespace>'
 
 Also change line 23 to match your secret name: 
 token: ${{ secrets.YOUR_GITHUB_PERSONAL_TOKEN }}
