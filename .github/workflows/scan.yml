@@ -13,8 +13,6 @@ jobs:
       contents: read       # allows this job to clone org repos
     env:
       GH_TOKEN: ${{ secrets.YOUR_GITHUB_PERSONAL_TOKEN }}  # Replace with your actual secret
-      ENDOR_API_CREDENTIALS_KEY: ${{ secrets.ENDOR_API_CREDENTIALS_KEY }}
-      ENDOR_API_CREDENTIALS_SECRET: ${{ secrets.ENDOR_API_CREDENTIALS_SECRET }}
       ENDOR_NAMESPACE: 'arsalan-learn'
       ENDOR_SCAN_SUMMARY_OUTPUT_TYPE: 'summary'
     steps:
@@ -48,13 +46,6 @@ jobs:
             fi
             cd project
             #ADD ANY CUSTOM BUILD STEPS YOU NEED HERE
-            if [ -f defaults.txt ]; then
-                cp defaults.txt requirements.txt
-                python -m pip install --upgrade pip
-                pip install -r requirements.txt
-              else
-                echo "No defaults.txt found, skipping dependency installation."
-              fi
             cd ..
             ./endorctl scan --path=project  || echo "Endorctl scan failed for $CLONE_URL, continuing..."
             rm -rf project    
