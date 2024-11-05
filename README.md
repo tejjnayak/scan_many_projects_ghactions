@@ -1,3 +1,6 @@
+Quickly scan repos outside your org or inside your org. You load in a list of repo urls and let it running, instead of having to do it one by one manually. 
+Use case: If you need to add in a build step for each repo you can do so on the line that says #ADD ANY CUSTOM BUILD STEPS YOU NEED HERE
+
 Step 1:
 
 Fork the repo into your org: https://github.com/Endor-Solutions-Architecture/scan_many_projects_ghactions
