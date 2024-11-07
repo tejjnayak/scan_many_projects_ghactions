@@ -15,6 +15,7 @@ jobs:
       GH_TOKEN: ${{ secrets.YOUR_GITHUB_PERSONAL_TOKEN }}  # Replace with your actual secret
       ENDOR_NAMESPACE: 'arsalan-learn'
       ENDOR_SCAN_SUMMARY_OUTPUT_TYPE: 'summary'
+      ENDOR_GITHUB_ACTION_TOKEN_ENABLE: "true"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
