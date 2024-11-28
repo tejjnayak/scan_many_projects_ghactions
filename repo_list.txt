@@ -1,3 +1,1 @@
-https://github.com/vulnerable-apps/vuln_node_express
-https://github.com/vulnerable-apps/brokencrystals-demo
-https://github.com/vulnerable-apps/yrpreyTasksNodeJS
+https://github.com/googleapis/google-api-php-client
